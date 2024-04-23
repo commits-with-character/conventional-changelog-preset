@@ -1,0 +1,55 @@
+{
+  "name": "@commits-with-character/conventional-changelog-preset",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "commits-with-character.org preset for conventional-changelog.",
+  "author": "Will Stone",
+  "scripts": {
+    "build": "tsup ./src/index.ts --dts --format esm,cjs --shims --cjsInterop --splitting",
+    "test": "vitest",
+    "release": "release-it"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/commits-with-character/conventional-changelog-preset",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commits-with-character/conventional-changelog-preset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/commits-with-character/conventional-changelog-preset/issues"
+  },
+  "keywords": [
+    "conventional-changelog",
+    "commits-with-character.org",
+    "preset"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.cjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "module": "./dist/index.js",
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "dependencies": {
+    "compare-func": "^2.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/lint": "^19.2.2",
+    "@release-it/conventional-changelog": "^8.0.1",
+    "conventional-changelog": "^5.1.0",
+    "conventional-changelog-core": "^7.0.0",
+    "conventional-recommended-bump": "^9.0.0",
+    "release-it": "^17.2.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
+  }
+}

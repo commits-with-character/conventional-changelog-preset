@@ -1,1 +1,1 @@
-# conventional-changelog-semver-commits
+# @commits-with-character/conventional-changelog-preset
