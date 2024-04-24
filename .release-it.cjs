@@ -1,4 +1,4 @@
-const preset = require("./dist/index.cjs");
+const config = require("./src/index");
 
 module.exports = {
   git: {
@@ -9,8 +9,8 @@ module.exports = {
   },
   plugins: {
     "@release-it/conventional-changelog": {
-      config: preset,
       infile: "CHANGELOG.md",
+      config,
     },
   },
 };

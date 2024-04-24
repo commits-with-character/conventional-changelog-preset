@@ -1,15 +1,15 @@
-import { readFile } from "fs/promises";
-import { resolve } from "path";
-import compareFunc from "compare-func";
+const { readFile } = require("node:fs/promises");
+const { resolve } = require("node:path");
+const compareFunc = require("compare-func");
 
 const dirname = __dirname;
 
-export async function createWriterOpts() {
+async function createWriterOpts() {
   const [template, header, commit, footer] = await Promise.all([
-    readFile(resolve(dirname, "../templates/template.hbs"), "utf-8"),
-    readFile(resolve(dirname, "../templates/header.hbs"), "utf-8"),
-    readFile(resolve(dirname, "../templates/commit.hbs"), "utf-8"),
-    readFile(resolve(dirname, "../templates/footer.hbs"), "utf-8"),
+    readFile(resolve(dirname, "./templates/template.hbs"), "utf-8"),
+    readFile(resolve(dirname, "./templates/header.hbs"), "utf-8"),
+    readFile(resolve(dirname, "./templates/commit.hbs"), "utf-8"),
+    readFile(resolve(dirname, "./templates/footer.hbs"), "utf-8"),
   ]);
 
   const writerOpts = getWriterOpts();
@@ -21,6 +21,8 @@ export async function createWriterOpts() {
 
   return writerOpts;
 }
+
+module.exports.createWriterOpts = createWriterOpts;
 
 function getWriterOpts() {
   return {

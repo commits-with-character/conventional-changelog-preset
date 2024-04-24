@@ -1,9 +1,13 @@
-import { createParserOpts } from "./parserOpts.js";
-import { createWriterOpts } from "./writerOpts.js";
-import { createConventionalChangelogOpts } from "./conventionalChangelog.js";
-import { createConventionalRecommendedBumpOpts } from "./conventionalRecommendedBump.js";
+const { createParserOpts } = require("./parserOpts.js");
+const { createWriterOpts } = require("./writerOpts.js");
+const {
+  createConventionalChangelogOpts,
+} = require("./conventionalChangelog.js");
+const {
+  createConventionalRecommendedBumpOpts,
+} = require("./conventionalRecommendedBump.js");
 
-export default async function createPreset() {
+async function createPreset() {
   const parserOpts = createParserOpts();
   const writerOpts = await createWriterOpts();
   const recommendedBumpOpts = createConventionalRecommendedBumpOpts(parserOpts);
@@ -19,3 +23,5 @@ export default async function createPreset() {
     conventionalChangelog,
   };
 }
+
+module.exports = createPreset;

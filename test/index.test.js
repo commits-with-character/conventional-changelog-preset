@@ -1,7 +1,7 @@
 import conventionalChangelog from "conventional-changelog-core";
 import { afterEach, beforeEach, expect, test, vi } from "vitest";
 import { TestTools } from "./utils.js";
-import preset from "../dist/index.js";
+import preset from "../src/index.js";
 import conventionalRecommendedBump from "conventional-recommended-bump";
 
 function streamToString(stream) {
