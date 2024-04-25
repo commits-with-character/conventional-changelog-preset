@@ -7,9 +7,9 @@ const {
   createConventionalRecommendedBumpOpts,
 } = require("./conventionalRecommendedBump.js");
 
-async function createPreset() {
+function createPreset() {
   const parserOpts = createParserOpts();
-  const writerOpts = await createWriterOpts();
+  const writerOpts = createWriterOpts();
   const recommendedBumpOpts = createConventionalRecommendedBumpOpts(parserOpts);
   const conventionalChangelog = createConventionalChangelogOpts(
     parserOpts,
