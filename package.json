@@ -1,7 +1,7 @@
 {
   "name": "@commits-with-character/conventional-changelog-preset",
   "type": "commonjs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "commits-with-character.org preset for conventional-changelog.",
   "author": "Will Stone",
   "scripts": {
