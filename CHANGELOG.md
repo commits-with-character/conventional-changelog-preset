@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.3](https://github.com/commits-with-character/conventional-changelog-preset/compare/0.0.2...0.0.3) (2024-04-28)
+
+### Patches
+
+* Fix code files not published ([20ab6c4](https://github.com/commits-with-character/conventional-changelog-preset/commit/20ab6c4043faa2a51a89c72080ec5b4bc6868294))
+
 ## 0.0.2 (2024-04-27)
 
 ### Patches
