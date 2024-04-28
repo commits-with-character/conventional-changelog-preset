@@ -27,8 +27,7 @@
   },
   "main": "./src/index.js",
   "files": [
-    "dist",
-    "templates"
+    "src"
   ],
   "dependencies": {
     "compare-func": "^2.0.0"
