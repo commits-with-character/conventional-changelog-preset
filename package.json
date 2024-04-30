@@ -23,6 +23,7 @@
     "src"
   ],
   "scripts": {
+    "lint": "eslint .",
     "release": "release-it",
     "test": "vitest"
   },

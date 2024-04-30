@@ -1,11 +1,11 @@
-const { createParserOpts } = require('./parserOpts.js')
-const { createWriterOpts } = require('./writerOpts.js')
+const { createParserOpts } = require('./parser-opts.js')
+const { createWriterOpts } = require('./writer-opts.js')
 const {
   createConventionalChangelogOpts,
-} = require('./conventionalChangelog.js')
+} = require('./conventional-changelog.js')
 const {
   createConventionalRecommendedBumpOpts,
-} = require('./conventionalRecommendedBump.js')
+} = require('./conventional-recommended-bump.js')
 
 function createPreset() {
   const parserOpts = createParserOpts()
@@ -17,10 +17,10 @@ function createPreset() {
   )
 
   return {
-    parserOpts,
-    writerOpts,
-    recommendedBumpOpts,
     conventionalChangelog,
+    parserOpts,
+    recommendedBumpOpts,
+    writerOpts,
   }
 }
 

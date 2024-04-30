@@ -1,7 +1,7 @@
 function createParserOpts() {
   return {
-    headerPattern: /^([!^~]) \s*(.*)$/,
     headerCorrespondence: ['character', 'subject'],
+    headerPattern: /^([!^~]) \s*(.*)$/u,
   }
 }
 

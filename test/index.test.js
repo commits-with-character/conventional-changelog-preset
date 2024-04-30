@@ -1,8 +1,9 @@
 import conventionalChangelog from 'conventional-changelog-core'
-import { afterEach, beforeEach, expect, test, vi } from 'vitest'
-import { TestTools } from './utils.js'
-import preset from '../src/index.js'
 import conventionalRecommendedBump from 'conventional-recommended-bump'
+import { afterEach, beforeEach, expect, test, vi } from 'vitest'
+
+import preset from '../src/index.js'
+import { TestTools } from './utils.js'
 
 function streamToString(stream) {
   const chunks = []
@@ -23,11 +24,11 @@ beforeEach(() => {
     'package.json',
     JSON.stringify({
       name: 'conventional-changelog-semver-commits',
-      version: '1.0.0',
       repository: {
         type: 'git',
         url: 'https://github.com/SemVer-Commits/conventional-changelog-semver-commits.git',
       },
+      version: '1.0.0',
     }),
   )
 })
@@ -44,8 +45,8 @@ test('should be breaking on !', async () => {
 
   expect(
     await conventionalRecommendedBump({
-      cwd: testTools.cwd,
       config: preset(),
+      cwd: testTools.cwd,
     }),
   ).toStrictEqual({
     level: 0,
@@ -56,8 +57,8 @@ test('should be breaking on !', async () => {
   expect(
     await streamToString(
       conventionalChangelog({
-        cwd: testTools.cwd,
         config: preset,
+        cwd: testTools.cwd,
       }),
     ),
   ).toMatch(
@@ -70,11 +71,11 @@ test('should be minor on ^', async () => {
     'package.json',
     JSON.stringify({
       name: 'conventional-changelog-semver-commits',
-      version: '1.0.0',
       repository: {
         type: 'git',
         url: 'https://github.com/SemVer-Commits/conventional-changelog-semver-commits.git',
       },
+      version: '1.0.0',
     }),
   )
 
@@ -84,8 +85,8 @@ test('should be minor on ^', async () => {
 
   expect(
     await conventionalRecommendedBump({
-      cwd: testTools.cwd,
       config: preset(),
+      cwd: testTools.cwd,
     }),
   ).toStrictEqual({
     level: 1,
@@ -96,8 +97,8 @@ test('should be minor on ^', async () => {
   expect(
     await streamToString(
       conventionalChangelog({
-        cwd: testTools.cwd,
         config: preset,
+        cwd: testTools.cwd,
       }),
     ),
   ).toMatch(
@@ -110,11 +111,11 @@ test('should be patch on ~', async () => {
     'package.json',
     JSON.stringify({
       name: 'conventional-changelog-semver-commits',
-      version: '1.0.0',
       repository: {
         type: 'git',
         url: 'https://github.com/SemVer-Commits/conventional-changelog-semver-commits.git',
       },
+      version: '1.0.0',
     }),
   )
 
@@ -123,8 +124,8 @@ test('should be patch on ~', async () => {
 
   expect(
     await conventionalRecommendedBump({
-      cwd: testTools.cwd,
       config: preset(),
+      cwd: testTools.cwd,
     }),
   ).toStrictEqual({
     level: 2,
@@ -135,8 +136,8 @@ test('should be patch on ~', async () => {
   expect(
     await streamToString(
       conventionalChangelog({
-        cwd: testTools.cwd,
         config: preset,
+        cwd: testTools.cwd,
       }),
     ),
   ).toMatch(

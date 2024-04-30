@@ -1,7 +1,6 @@
-import { execSync, spawn } from 'node:child_process'
+import { execSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
-import { pathToFileURL } from 'node:url'
 
 function fixMessage(message) {
   let msg = message
@@ -13,7 +12,7 @@ function fixMessage(message) {
   // we need to escape backtick for bash but not for windows
   // probably this should be done in git-dummy-commit or shelljs
   if (process.platform !== 'win32') {
-    msg = msg.replace(/`/g, '\\`')
+    msg = msg.replaceAll('`', '\\`')
   }
 
   return `"${msg}"`
@@ -52,7 +51,7 @@ export class TestTools {
       this.rmSync(this.cwd, {
         recursive: true,
       })
-    } catch (err) {
+    } catch {
       // ignore
     }
   }
@@ -76,8 +75,8 @@ export class TestTools {
   exec(command) {
     return execSync(command, {
       cwd: this.cwd,
+      encoding: 'utf8',
       stdio: 'pipe',
-      encoding: 'utf-8',
     })
   }
 
