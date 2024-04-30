@@ -1,17 +1,17 @@
-const config = require("./src/index");
+const config = require('./src/index')
 
 module.exports = {
   git: {
-    commitMessage: "Release v${version}",
+    commitMessage: 'Release v${version}',
   },
   github: {
     release: true,
   },
   plugins: {
-    "@release-it/conventional-changelog": {
-      infile: "CHANGELOG.md",
-      header: "# Changelog",
+    '@release-it/conventional-changelog': {
+      infile: 'CHANGELOG.md',
+      header: '# Changelog',
       config: config(),
     },
   },
-};
+}

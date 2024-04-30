@@ -1,34 +1,32 @@
 {
   "name": "@commits-with-character/conventional-changelog-preset",
-  "type": "commonjs",
   "version": "0.0.3",
   "description": "commits-with-character.org preset for conventional-changelog.",
-  "author": "Will Stone",
-  "scripts": {
-    "test": "vitest",
-    "release": "release-it"
-  },
-  "license": "ISC",
-  "homepage": "https://github.com/commits-with-character/conventional-changelog-preset",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/commits-with-character/conventional-changelog-preset.git"
-  },
-  "bugs": {
-    "url": "https://github.com/commits-with-character/conventional-changelog-preset/issues"
-  },
   "keywords": [
     "conventional-changelog",
     "commits-with-character.org",
     "preset"
   ],
-  "engines": {
-    "node": ">=18"
+  "homepage": "https://github.com/commits-with-character/conventional-changelog-preset",
+  "bugs": {
+    "url": "https://github.com/commits-with-character/conventional-changelog-preset/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/commits-with-character/conventional-changelog-preset.git"
+  },
+  "license": "ISC",
+  "author": "Will Stone",
+  "type": "commonjs",
   "main": "./src/index.js",
   "files": [
     "src"
   ],
+  "scripts": {
+    "release": "release-it",
+    "test": "vitest"
+  },
+  "prettier": "@will-stone/prettier-config",
   "dependencies": {
     "compare-func": "^2.0.0"
   },
@@ -36,11 +34,18 @@
     "@commitlint/lint": "^19.2.2",
     "@commits-with-character/conventional-changelog-preset": "^0.0.1",
     "@release-it/conventional-changelog": "^8.0.1",
+    "@will-stone/eslint-config": "^8.0.4",
+    "@will-stone/prettier-config": "^8.0.0",
     "conventional-changelog": "^5.1.0",
     "conventional-changelog-core": "^7.0.0",
     "conventional-recommended-bump": "^9.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
     "release-it": "^17.2.0",
     "vitest": "^1.5.0"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "publishConfig": {
     "access": "public"

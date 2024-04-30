@@ -2,8 +2,7 @@ function createConventionalChangelogOpts(parserOpts, writerOpts) {
   return {
     parserOpts,
     writerOpts,
-  };
+  }
 }
 
-module.exports.createConventionalChangelogOpts =
-  createConventionalChangelogOpts;
+module.exports.createConventionalChangelogOpts = createConventionalChangelogOpts

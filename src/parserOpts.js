@@ -1,8 +1,8 @@
 function createParserOpts() {
   return {
     headerPattern: /^([!^~]) \s*(.*)$/,
-    headerCorrespondence: ["character", "subject"],
-  };
+    headerCorrespondence: ['character', 'subject'],
+  }
 }
 
-module.exports.createParserOpts = createParserOpts;
+module.exports.createParserOpts = createParserOpts
