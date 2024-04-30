@@ -67,18 +67,6 @@ test('should be breaking on !', async () => {
 })
 
 test('should be minor on ^', async () => {
-  testTools.writeFileSync(
-    'package.json',
-    JSON.stringify({
-      name: 'conventional-changelog-semver-commits',
-      repository: {
-        type: 'git',
-        url: 'https://github.com/SemVer-Commits/conventional-changelog-semver-commits.git',
-      },
-      version: '1.0.0',
-    }),
-  )
-
   testTools.gitCommit(['^ Minor minor'])
   testTools.gitCommit(['Nothing releasable'])
   testTools.gitCommit(['~ Patch patch'])
@@ -107,18 +95,6 @@ test('should be minor on ^', async () => {
 })
 
 test('should be patch on ~', async () => {
-  testTools.writeFileSync(
-    'package.json',
-    JSON.stringify({
-      name: 'conventional-changelog-semver-commits',
-      repository: {
-        type: 'git',
-        url: 'https://github.com/SemVer-Commits/conventional-changelog-semver-commits.git',
-      },
-      version: '1.0.0',
-    }),
-  )
-
   testTools.gitCommit(['Nothing releasable'])
   testTools.gitCommit(['~ Patch patch'])
 
