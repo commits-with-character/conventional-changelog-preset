@@ -45,7 +45,7 @@ test("should be breaking on !", async () => {
   expect(
     await conventionalRecommendedBump({
       cwd: testTools.cwd,
-      config: await preset(),
+      config: preset(),
     })
   ).toStrictEqual({
     level: 0,
@@ -61,7 +61,7 @@ test("should be breaking on !", async () => {
       })
     )
   ).toMatch(
-    /^## 1.0.0 \(2000-01-01\)\n\n\n### Major changes\n\n\* Breaking breaking \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n### Minor changes\n\n\* Minor minor \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu
+    /^## 1.0.0 \(2000-01-01\)\n\n### Major changes\n\n\* Breaking breaking \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n### Minor changes\n\n\* Minor minor \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu
   );
 });
 
@@ -85,7 +85,7 @@ test("should be minor on ^", async () => {
   expect(
     await conventionalRecommendedBump({
       cwd: testTools.cwd,
-      config: await preset(),
+      config: preset(),
     })
   ).toStrictEqual({
     level: 1,
@@ -101,7 +101,7 @@ test("should be minor on ^", async () => {
       })
     )
   ).toMatch(
-    /^## 1.0.0 \(2000-01-01\)\n\n\n### Minor changes\n\n\* Minor minor \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu
+    /^## 1.0.0 \(2000-01-01\)\n\n### Minor changes\n\n\* Minor minor \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu
   );
 });
 
@@ -124,7 +124,7 @@ test("should be patch on ~", async () => {
   expect(
     await conventionalRecommendedBump({
       cwd: testTools.cwd,
-      config: await preset(),
+      config: preset(),
     })
   ).toStrictEqual({
     level: 2,
@@ -140,6 +140,6 @@ test("should be patch on ~", async () => {
       })
     )
   ).toMatch(
-    /^## 1.0.0 \(2000-01-01\)\n\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu
+    /^## 1.0.0 \(2000-01-01\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/SemVer-Commits\/conventional-changelog-semver-commits\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu
   );
 });

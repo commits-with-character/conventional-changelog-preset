@@ -90,9 +90,7 @@ export class TestTools {
 
   gitCommit(msg) {
     const args = formatMessageArgs(msg);
-
     args.push("--allow-empty", "--no-gpg-sign");
-
     return this.exec(`git commit ${args.join(" ")}`);
   }
 }
