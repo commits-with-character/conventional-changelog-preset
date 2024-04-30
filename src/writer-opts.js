@@ -47,17 +47,12 @@ function createWriterOpts() {
     resolve(dirname, './templates/commit.hbs'),
     'utf8',
   )
-  const footer = readFileSync(
-    resolve(dirname, './templates/footer.hbs'),
-    'utf8',
-  )
 
   const writerOpts = getWriterOpts()
 
   writerOpts.mainTemplate = template
   writerOpts.headerPartial = header
   writerOpts.commitPartial = commit
-  writerOpts.footerPartial = footer
 
   return writerOpts
 }
