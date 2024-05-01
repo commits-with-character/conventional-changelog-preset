@@ -1,6 +1,5 @@
 const { readFileSync } = require('node:fs')
 const { resolve } = require('node:path')
-const compareFunc = require('compare-func')
 
 const dirname = __dirname
 
@@ -9,8 +8,6 @@ function getWriterOpts() {
     commitGroupsSort: 'title',
     commitsSort: ['semver', 'shortDesc'],
     groupBy: 'semverTitle',
-    noteGroupsSort: 'title',
-    notesSort: compareFunc,
     transform: (commit) => {
       if (commit?.character === '!') {
         commit.semver = 'major'

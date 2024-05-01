@@ -28,9 +28,6 @@
     "test": "vitest"
   },
   "prettier": "@will-stone/prettier-config",
-  "dependencies": {
-    "compare-func": "^2.0.0"
-  },
   "devDependencies": {
     "@commitlint/lint": "^19.2.2",
     "@commits-with-character/conventional-changelog-preset": "^0.0.1",
