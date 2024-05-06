@@ -1,6 +1,6 @@
 {
   "name": "@semver-commits/conventional-changelog-preset",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "semver-commits.org preset for conventional-changelog.",
   "keywords": [
     "conventional-changelog",

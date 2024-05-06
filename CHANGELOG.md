@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.1.0](https://github.com/semver-commits/conventional-changelog-preset/compare/0.0.3...0.1.0) (2024-05-06)
+
+### Minor changes
+
+* Rename to SemVer Commits ([d1fd48f](https://github.com/semver-commits/conventional-changelog-preset/commit/d1fd48fff22961276b39a1158d50faf5c22fe1d9))
+
+### Patches
+
+* Remove unneeded notes functionality ([8e2481d](https://github.com/semver-commits/conventional-changelog-preset/commit/8e2481d4dbb807ab8a29ee1014c9fe50c714bf1b))
+* Remove unnecessary templates ([0e1a63f](https://github.com/semver-commits/conventional-changelog-preset/commit/0e1a63f23e602e394ebfd56ab1f363603fb57070))
+
 ## [0.0.3](https://github.com/semver-commits/conventional-changelog-preset/compare/0.0.2...0.0.3) (2024-04-28)
 
 ### Patches
