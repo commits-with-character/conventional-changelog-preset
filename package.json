@@ -1,19 +1,19 @@
 {
-  "name": "@commits-with-character/conventional-changelog-preset",
+  "name": "@semver-commits/conventional-changelog-preset",
   "version": "0.0.3",
-  "description": "commits-with-character.org preset for conventional-changelog.",
+  "description": "semver-commits.org preset for conventional-changelog.",
   "keywords": [
     "conventional-changelog",
-    "commits-with-character.org",
+    "semver-commits.org",
     "preset"
   ],
-  "homepage": "https://github.com/commits-with-character/conventional-changelog-preset",
+  "homepage": "https://github.com/semver-commits/conventional-changelog-preset",
   "bugs": {
-    "url": "https://github.com/commits-with-character/conventional-changelog-preset/issues"
+    "url": "https://github.com/semver-commits/conventional-changelog-preset/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/commits-with-character/conventional-changelog-preset.git"
+    "url": "https://github.com/semver-commits/conventional-changelog-preset.git"
   },
   "license": "ISC",
   "author": "Will Stone",
@@ -30,7 +30,6 @@
   "prettier": "@will-stone/prettier-config",
   "devDependencies": {
     "@commitlint/lint": "^19.2.2",
-    "@commits-with-character/conventional-changelog-preset": "^0.0.1",
     "@release-it/conventional-changelog": "^8.0.1",
     "@will-stone/eslint-config": "^8.0.4",
     "@will-stone/prettier-config": "^8.0.0",

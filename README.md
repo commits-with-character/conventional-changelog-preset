@@ -1,3 +1,3 @@
-# @commits-with-character/conventional-changelog-preset
+# @semver-commits/conventional-changelog-preset
 
 Docs TBC
