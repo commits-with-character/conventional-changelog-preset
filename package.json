@@ -1,6 +1,6 @@
 {
   "name": "@commits-with-character/conventional-changelog-preset",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "commits-with-character.org preset for conventional-changelog.",
   "keywords": [
     "conventional-changelog",

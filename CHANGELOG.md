@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.2](https://github.com/commits-with-character/conventional-changelog-preset/compare/0.2.1...0.2.2) (2024-05-15)
+
+### Patches
+
+* Advise on how to use with release-it ([b0895da](https://github.com/commits-with-character/conventional-changelog-preset/commit/b0895da550e49305568a4a10431b9bd228e3f82f))
+
 ## 0.2.1 (2024-05-07)
 
 ### Patches
