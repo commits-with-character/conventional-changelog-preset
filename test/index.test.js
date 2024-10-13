@@ -43,25 +43,25 @@ test('should be breaking on !', async () => {
   testTools.gitCommit(['~ Patch patch'])
   testTools.gitCommit(['Nothing releasable'])
 
-  expect(
-    await conventionalRecommendedBump({
+  await expect(
+    conventionalRecommendedBump({
       config: preset(),
       cwd: testTools.cwd,
     }),
-  ).toStrictEqual({
+  ).resolves.toStrictEqual({
     level: 0,
     reason: 'There are breaking, major changes',
     releaseType: 'major',
   })
 
-  expect(
-    await streamToString(
+  await expect(
+    streamToString(
       conventionalChangelog({
         config: preset,
         cwd: testTools.cwd,
       }),
     ),
-  ).toMatch(
+  ).resolves.toMatch(
     /^## 1.0.0 \(2000-01-01\)\n\n### Major changes\n\n\* Breaking breaking \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n### Minor changes\n\n\* Minor minor \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu,
   )
 })
@@ -71,25 +71,25 @@ test('should be minor on ^', async () => {
   testTools.gitCommit(['Nothing releasable'])
   testTools.gitCommit(['~ Patch patch'])
 
-  expect(
-    await conventionalRecommendedBump({
+  await expect(
+    conventionalRecommendedBump({
       config: preset(),
       cwd: testTools.cwd,
     }),
-  ).toStrictEqual({
+  ).resolves.toStrictEqual({
     level: 1,
     reason: 'There are minor changes',
     releaseType: 'minor',
   })
 
-  expect(
-    await streamToString(
+  await expect(
+    streamToString(
       conventionalChangelog({
         config: preset,
         cwd: testTools.cwd,
       }),
     ),
-  ).toMatch(
+  ).resolves.toMatch(
     /^## 1.0.0 \(2000-01-01\)\n\n### Minor changes\n\n\* Minor minor \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu,
   )
 })
@@ -98,25 +98,25 @@ test('should be patch on ~', async () => {
   testTools.gitCommit(['Nothing releasable'])
   testTools.gitCommit(['~ Patch patch'])
 
-  expect(
-    await conventionalRecommendedBump({
+  await expect(
+    conventionalRecommendedBump({
       config: preset(),
       cwd: testTools.cwd,
     }),
-  ).toStrictEqual({
+  ).resolves.toStrictEqual({
     level: 2,
     reason: 'There are patches',
     releaseType: 'patch',
   })
 
-  expect(
-    await streamToString(
+  await expect(
+    streamToString(
       conventionalChangelog({
         config: preset,
         cwd: testTools.cwd,
       }),
     ),
-  ).toMatch(
+  ).resolves.toMatch(
     /^## 1.0.0 \(2000-01-01\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu,
   )
 })

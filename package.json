@@ -31,12 +31,12 @@
   "devDependencies": {
     "@commitlint/lint": "^19.5.0",
     "@release-it/conventional-changelog": "^8.0.1",
-    "@will-stone/eslint-config": "^8.0.4",
+    "@will-stone/eslint-config": "^11.0.4",
     "@will-stone/prettier-config": "^8.0.1",
     "conventional-changelog": "^5.1.0",
     "conventional-changelog-core": "^7.0.0",
     "conventional-recommended-bump": "^9.0.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.12.0",
     "prettier": "^3.3.3",
     "release-it": "^17.8.2",
     "vitest": "^1.5.0"
@@ -46,5 +46,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "overrides": {
+    "eslint": "^9.12.0"
   }
 }
