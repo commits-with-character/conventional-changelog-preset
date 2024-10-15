@@ -1,5 +1,7 @@
+import path from 'node:path'
+
 import conventionalChangelog from 'conventional-changelog-core'
-import conventionalRecommendedBump from 'conventional-recommended-bump'
+import { Bumper } from 'conventional-recommended-bump'
 import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 
 import preset from '../src/index.js'
@@ -43,12 +45,11 @@ test('should be breaking on !', async () => {
   testTools.gitCommit(['~ Patch patch'])
   testTools.gitCommit(['Nothing releasable'])
 
-  await expect(
-    conventionalRecommendedBump({
-      config: preset(),
-      cwd: testTools.cwd,
-    }),
-  ).resolves.toStrictEqual({
+  const bumper = new Bumper(testTools.cwd)
+  bumper.loadPreset(path.join(__dirname, '../src/index.js'))
+  const result = await bumper.bump()
+
+  expect(result).toStrictEqual({
     level: 0,
     reason: 'There are breaking, major changes',
     releaseType: 'major',
@@ -71,12 +72,11 @@ test('should be minor on ^', async () => {
   testTools.gitCommit(['Nothing releasable'])
   testTools.gitCommit(['~ Patch patch'])
 
-  await expect(
-    conventionalRecommendedBump({
-      config: preset(),
-      cwd: testTools.cwd,
-    }),
-  ).resolves.toStrictEqual({
+  const bumper = new Bumper(testTools.cwd)
+  bumper.loadPreset(path.join(__dirname, '../src/index.js'))
+  const result = await bumper.bump()
+
+  expect(result).toStrictEqual({
     level: 1,
     reason: 'There are minor changes',
     releaseType: 'minor',
@@ -98,12 +98,11 @@ test('should be patch on ~', async () => {
   testTools.gitCommit(['Nothing releasable'])
   testTools.gitCommit(['~ Patch patch'])
 
-  await expect(
-    conventionalRecommendedBump({
-      config: preset(),
-      cwd: testTools.cwd,
-    }),
-  ).resolves.toStrictEqual({
+  const bumper = new Bumper(testTools.cwd)
+  bumper.loadPreset(path.join(__dirname, '../src/index.js'))
+  const result = await bumper.bump()
+
+  expect(result).toStrictEqual({
     level: 2,
     reason: 'There are patches',
     releaseType: 'patch',

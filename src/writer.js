@@ -9,24 +9,26 @@ function getWriterOpts() {
     commitsSort: ['semver', 'shortDesc'],
     groupBy: 'semverTitle',
     transform: (commit) => {
+      const output = {}
+
       if (commit?.character === '!') {
-        commit.semver = 'major'
-        commit.semverTitle = 'Major changes'
+        output.semver = 'major'
+        output.semverTitle = 'Major changes'
       } else if (commit?.character === '^') {
-        commit.semver = 'minor'
-        commit.semverTitle = 'Minor changes'
+        output.semver = 'minor'
+        output.semverTitle = 'Minor changes'
       } else if (commit?.character === '~') {
-        commit.semver = 'patch'
-        commit.semverTitle = 'Patches'
+        output.semver = 'patch'
+        output.semverTitle = 'Patches'
       } else {
         return
       }
 
       if (typeof commit.hash === 'string') {
-        commit.shortHash = commit.hash.slice(0, 7)
+        output.shortHash = commit.hash.slice(0, 7)
       }
 
-      return commit
+      return output
     },
   }
 }
