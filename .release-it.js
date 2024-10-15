@@ -1,4 +1,4 @@
-const config = require('./src/index.js')
+const path = require('node:path')
 
 module.exports = {
   github: {
@@ -9,9 +9,9 @@ module.exports = {
   },
   plugins: {
     '@release-it/conventional-changelog': {
-      config: config(),
       header: '# Changelog',
       infile: 'CHANGELOG.md',
+      preset: path.join(__dirname, 'src/index.js'),
     },
   },
 }
