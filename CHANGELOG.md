@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/0.2.2...1.0.0) (2024-10-15)
+
+### Major changes
+
+* Support conventional-changelog v6 and @release-it/conventional-changelog v9 ([521d087](https://github.com/commits-with-character/conventional-changelog-preset/commit/521d08743b48308abf44f2884e53960e68c086b5))
+
 ## [0.2.2](https://github.com/commits-with-character/conventional-changelog-preset/compare/0.2.1...0.2.2) (2024-05-15)
 
 ### Patches
