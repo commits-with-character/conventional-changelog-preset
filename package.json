@@ -43,7 +43,7 @@
   "devDependencies": {
     "@commitlint/lint": "^19.5.0",
     "@release-it/conventional-changelog": "^9.0.0",
-    "@will-stone/eslint-config": "^11.0.4",
+    "@will-stone/eslint-config": "^12.0.0",
     "@will-stone/prettier-config": "^8.0.1",
     "conventional-changelog": "^6.0.0",
     "conventional-changelog-core": "^8.0.0",
@@ -51,7 +51,7 @@
     "eslint": "^9.12.0",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "release-it": "^17.9.0",
+    "release-it": "^17.10.0",
     "simple-git-hooks": "^2.11.1",
     "vitest": "^2.1.3"
   },
