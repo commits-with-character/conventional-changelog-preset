@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/1.0.0...2.0.0) (2025-01-20)
+
+### Major changes
+
+- Set peerDep on release-it to v18, and @release-it/conventional-changelog to
+  v10
+  ([be5309a](https://github.com/commits-with-character/conventional-changelog-preset/commit/be5309ae28950a375c4763babdf3a0ee5c3c5ae9))
+
 ## [1.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/0.2.2...1.0.0) (2024-10-15)
 
 ### Major changes
