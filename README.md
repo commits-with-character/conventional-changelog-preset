@@ -7,8 +7,16 @@ to provide the recommended bump, and update the changelog file.
 
 ## Using with release-it
 
+npm:
+
 ```sh
 npm install -D release-it @release-it/conventional-changelog @commits-with-character/conventional-changelog-preset
+```
+
+pnpm:
+
+```sh
+pnpm install -D release-it @release-it/conventional-changelog @commits-with-character/conventional-changelog-preset
 ```
 
 ```jsonc

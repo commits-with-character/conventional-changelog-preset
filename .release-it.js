@@ -5,7 +5,7 @@ module.exports = {
     release: true,
   },
   hooks: {
-    'before:init': ['npm run lint', 'npm test'],
+    'before:init': ['pnpm lint', 'pnpm test'],
   },
   plugins: {
     '@release-it/conventional-changelog': {
