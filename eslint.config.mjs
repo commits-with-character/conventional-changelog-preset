@@ -1,7 +1,7 @@
 import config from '@will-stone/eslint-config'
 
 export default [
-  ...config(),
+  ...(await config()),
   {
     rules: {
       'unicorn/prefer-module': 'off',

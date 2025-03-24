@@ -1,6 +1,6 @@
 const { createParserOpts } = require('./parser.js')
-const { createWriterOpts } = require('./writer.js')
 const { whatBump } = require('./what-bump.js')
+const { createWriterOpts } = require('./writer.js')
 
 function createPreset() {
   return {
