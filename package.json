@@ -63,6 +63,11 @@
   "publishConfig": {
     "access": "public"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
   "overrides": {
     "eslint": "$eslint"
   }
