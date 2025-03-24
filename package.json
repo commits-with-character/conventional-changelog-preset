@@ -24,12 +24,9 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "prepare": "simple-git-hooks",
+    "prepare": "husky",
     "release": "release-it",
     "test": "vitest"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm exec lint-staged"
   },
   "lint-staged": {
     "*.{css,json,md,js,cjs,mjs}": [
@@ -48,9 +45,9 @@
     "conventional-changelog-core": "^8.0.0",
     "conventional-recommended-bump": "^10.0.0",
     "eslint": "^9.12.0",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
-    "simple-git-hooks": "^2.11.1",
     "vitest": "^3.0.2"
   },
   "peerDependencies": {
