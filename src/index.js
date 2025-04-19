@@ -1,6 +1,6 @@
-const { createParserOpts } = require('./parser.js')
-const { whatBump } = require('./what-bump.js')
-const { createWriterOpts } = require('./writer.js')
+import { createParserOpts } from './parser.js'
+import { whatBump } from './what-bump.js'
+import { createWriterOpts } from './writer.js'
 
 function createPreset() {
   return {
@@ -10,4 +10,4 @@ function createPreset() {
   }
 }
 
-module.exports = createPreset
+export default createPreset

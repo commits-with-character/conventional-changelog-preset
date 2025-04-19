@@ -17,8 +17,8 @@
   },
   "license": "ISC",
   "author": "Will Stone",
-  "type": "commonjs",
-  "main": "./src/index.js",
+  "type": "module",
+  "exports": "./src/index.js",
   "files": [
     "src"
   ],

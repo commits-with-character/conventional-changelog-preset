@@ -1,4 +1,4 @@
-function whatBump(commits) {
+export function whatBump(commits) {
   let level = 3
   let reason = 'There are no releasable changes'
 
@@ -17,5 +17,3 @@ function whatBump(commits) {
 
   return { level, reason }
 }
-
-module.exports.whatBump = whatBump

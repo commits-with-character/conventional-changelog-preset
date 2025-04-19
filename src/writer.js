@@ -1,7 +1,5 @@
-const { readFileSync } = require('node:fs')
-const { resolve } = require('node:path')
-
-const dirname = __dirname
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 function getWriterOpts() {
   return {
@@ -33,17 +31,17 @@ function getWriterOpts() {
   }
 }
 
-function createWriterOpts() {
+export function createWriterOpts() {
   const template = readFileSync(
-    resolve(dirname, './templates/template.hbs'),
+    resolve(import.meta.dirname, './templates/template.hbs'),
     'utf8',
   )
   const header = readFileSync(
-    resolve(dirname, './templates/header.hbs'),
+    resolve(import.meta.dirname, './templates/header.hbs'),
     'utf8',
   )
   const commit = readFileSync(
-    resolve(dirname, './templates/commit.hbs'),
+    resolve(import.meta.dirname, './templates/commit.hbs'),
     'utf8',
   )
 
@@ -55,5 +53,3 @@ function createWriterOpts() {
 
   return writerOpts
 }
-
-module.exports.createWriterOpts = createWriterOpts

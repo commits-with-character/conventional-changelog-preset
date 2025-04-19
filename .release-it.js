@@ -1,6 +1,6 @@
-const path = require('node:path')
+import path from 'node:path'
 
-module.exports = {
+export default {
   github: {
     release: true,
   },
@@ -11,7 +11,7 @@ module.exports = {
     '@release-it/conventional-changelog': {
       header: '# Changelog',
       infile: 'CHANGELOG.md',
-      preset: path.join(__dirname, 'src/index.js'),
+      preset: path.join(import.meta.dirname, 'src/index.js'),
     },
   },
 }
