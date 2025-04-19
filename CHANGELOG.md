@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/2.0.0...3.0.0) (2025-04-19)
+
+### Major changes
+
+- Upgrade release-it peer-dep to v19
+  ([3b7f685](https://github.com/commits-with-character/conventional-changelog-preset/commit/3b7f68586dabf1a9c4d0faa512068e330642f40c))
+
 ## [2.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/1.0.0...2.0.0) (2025-01-20)
 
 ### Major changes
