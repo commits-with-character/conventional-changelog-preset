@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/3.0.0...4.0.0) (2025-04-19)
+
+### Major changes
+
+- Package is now ESM
+  ([0059810](https://github.com/commits-with-character/conventional-changelog-preset/commit/00598101ea8eeac72205e5c63e893e7b8d2c3b67))
+
 ## [3.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/2.0.0...3.0.0) (2025-04-19)
 
 ### Major changes
