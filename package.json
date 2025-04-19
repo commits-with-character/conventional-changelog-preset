@@ -38,17 +38,17 @@
   },
   "prettier": "@will-stone/prettier-config",
   "devDependencies": {
-    "@vitest/eslint-plugin": "^1.1.38",
-    "@will-stone/eslint-config": "^15.0.4",
+    "@vitest/eslint-plugin": "^1.1.43",
+    "@will-stone/eslint-config": "^15.0.5",
     "@will-stone/prettier-config": "^9.0.2",
     "conventional-changelog": "^6.0.0",
     "conventional-changelog-core": "^9.0.0",
     "conventional-recommended-bump": "^11.0.0",
-    "eslint": "^9.23.0",
+    "eslint": "^9.25.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.0",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
-    "vitest": "^3.0.9"
+    "vitest": "^3.1.1"
   },
   "peerDependencies": {
     "@release-it/conventional-changelog": "^10.0.0",
