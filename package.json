@@ -39,7 +39,7 @@
   "prettier": "@will-stone/prettier-config",
   "devDependencies": {
     "@vitest/eslint-plugin": "^1.1.43",
-    "@will-stone/eslint-config": "^15.0.5",
+    "@will-stone/eslint-config": "^15.1.0",
     "@will-stone/prettier-config": "^9.0.2",
     "conventional-changelog": "^6.0.0",
     "conventional-changelog-core": "^9.0.0",
