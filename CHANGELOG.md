@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.1.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/5.0.0...5.1.0) (2025-04-30)
+
+### Minor changes
+
+- Add line break after body message
+  ([1062596](https://github.com/commits-with-character/conventional-changelog-preset/commit/10625966099f1fff9b8d2b69952bcbb5aa8067b9))
+
+  This should have a line break after it.
+
 ## [5.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/4.0.0...5.0.0) (2025-04-30)
 
 ### Major changes
