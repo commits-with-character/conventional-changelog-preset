@@ -120,3 +120,28 @@ test('should be patch on ~', async () => {
     /^## 1.0.0 \(2000-01-01\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu,
   )
 })
+
+test('should include message body', async () => {
+  testTools.gitCommit(['~ Patch patch\n\nThis is the message body'])
+
+  const bumper = new Bumper(testTools.cwd)
+  bumper.loadPreset(path.join(__dirname, '../src/index.js'))
+  const result = await bumper.bump()
+
+  expect(result).toStrictEqual({
+    level: 2,
+    reason: 'There are patches',
+    releaseType: 'patch',
+  })
+
+  await expect(
+    streamToString(
+      conventionalChangelog({
+        config: preset,
+        cwd: testTools.cwd,
+      }),
+    ),
+  ).resolves.toMatch(
+    /^## 1.0.0 \(2000-01-01\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n {2}This is the message body\n\n$/gmu,
+  )
+})

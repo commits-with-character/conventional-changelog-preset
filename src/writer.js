@@ -26,6 +26,10 @@ function getWriterOpts() {
         output.shortHash = commit.hash.slice(0, 7)
       }
 
+      if (commit.body) {
+        output.body = commit.body
+      }
+
       return output
     },
   }
