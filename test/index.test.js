@@ -121,8 +121,9 @@ test('should be patch on ~', async () => {
   )
 })
 
-test('should include message body', async () => {
-  testTools.gitCommit(['~ Patch patch\n\nThis is the message body'])
+test('should write multiple patches', async () => {
+  testTools.gitCommit(['~ Patch patch'])
+  testTools.gitCommit(['~ Another patch'])
 
   const bumper = new Bumper(testTools.cwd)
   bumper.loadPreset(path.join(__dirname, '../src/index.js'))
@@ -142,6 +143,32 @@ test('should include message body', async () => {
       }),
     ),
   ).resolves.toMatch(
-    /^## 1.0.0 \(2000-01-01\)\n\n### Patches\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n {2}This is the message body\n\n$/gmu,
+    /^## 1.0.0 \(2000-01-01\)\n\n### Patches\n\n\* Another patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n$/gmu,
+  )
+})
+
+test('should include message body', async () => {
+  testTools.gitCommit(['~ Patch patch\n\nThis is the message body'])
+  testTools.gitCommit(['~ Another patch\n\nThis also has a message body'])
+
+  const bumper = new Bumper(testTools.cwd)
+  bumper.loadPreset(path.join(__dirname, '../src/index.js'))
+  const result = await bumper.bump()
+
+  expect(result).toStrictEqual({
+    level: 2,
+    reason: 'There are patches',
+    releaseType: 'patch',
+  })
+
+  await expect(
+    streamToString(
+      conventionalChangelog({
+        config: preset,
+        cwd: testTools.cwd,
+      }),
+    ),
+  ).resolves.toMatch(
+    /^## 1.0.0 \(2000-01-01\)\n\n### Patches\n\n\* Another patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n {2}This also has a message body\n\n\* Patch patch \(\[[0-9a-f]{7}\]\(https:\/\/github.com\/commits-with-character\/conventional-changelog-preset\/commit\/[0-9a-f]{40}\)\)\n\n {2}This is the message body\n\n$/gmu,
   )
 })
