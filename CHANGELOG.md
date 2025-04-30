@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/4.0.0...5.0.0) (2025-04-30)
+
+### Major changes
+
+- Add support for commit message body
+  ([a1f0cee](https://github.com/commits-with-character/conventional-changelog-preset/commit/a1f0cee2a65a67f52077542090996888f9e5d795))
+
+  This allows you to add more text to each changelog entry.
+
 ## [4.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/3.0.0...4.0.0) (2025-04-19)
 
 ### Major changes
