@@ -5,6 +5,9 @@ An adapter you can use with tools such as
 [Conventional Changelog plugin](https://github.com/release-it/conventional-changelog)
 to provide the recommended bump, and update the changelog file.
 
+It will convert [Commits with Character](https://commits-with-character.org/)
+style commit messages to a changelog.
+
 ## Using with release-it
 
 npm:
