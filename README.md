@@ -6,7 +6,12 @@ An adapter you can use with tools such as
 to provide the recommended bump, and update the changelog file.
 
 It will convert [Commits with Character](https://commits-with-character.org/)
-style commit messages to a changelog.
+style commit messages to a changelog. The Commits With Character prefixes are
+parsed into the following changelog categories:
+
+- `~` -> Patches.
+- `^` -> Minor changes.
+- `!` -> Major changes.
 
 ## Using with release-it
 
