@@ -1,5 +1,19 @@
 # Changelog
 
+## [5.1.1](https://github.com/commits-with-character/conventional-changelog-preset/compare/5.1.0...5.1.1) (2025-05-01)
+
+### Patches
+
+- Update README with CWC to changelog headings
+  ([768e21c](https://github.com/commits-with-character/conventional-changelog-preset/commit/768e21cc5a2959c21f5084a1822fe10fb0c41996))
+
+  Again, this is really a test to see how two commits with bodies are presented.
+
+- Update README with link to CWC
+  ([ee45261](https://github.com/commits-with-character/conventional-changelog-preset/commit/ee45261db4074dab673e3d3b6944212e5ca33539))
+
+  This is really just a test for two commits in same changelog with body.
+
 ## [5.1.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/5.0.0...5.1.0) (2025-04-30)
 
 ### Minor changes
