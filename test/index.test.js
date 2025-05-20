@@ -50,11 +50,13 @@ test('should be breaking on !', async () => {
   bumper.loadPreset(path.join(__dirname, '../src/index.js'))
   const result = await bumper.bump()
 
-  expect(result).toStrictEqual({
-    level: 0,
-    reason: 'There are breaking, major changes',
-    releaseType: 'major',
-  })
+  expect(result).toStrictEqual(
+    expect.objectContaining({
+      level: 0,
+      reason: 'There are breaking, major changes',
+      releaseType: 'major',
+    }),
+  )
 
   await expect(
     streamToString(
@@ -77,11 +79,13 @@ test('should be minor on ^', async () => {
   bumper.loadPreset(path.join(__dirname, '../src/index.js'))
   const result = await bumper.bump()
 
-  expect(result).toStrictEqual({
-    level: 1,
-    reason: 'There are minor changes',
-    releaseType: 'minor',
-  })
+  expect(result).toStrictEqual(
+    expect.objectContaining({
+      level: 1,
+      reason: 'There are minor changes',
+      releaseType: 'minor',
+    }),
+  )
 
   await expect(
     streamToString(
@@ -103,11 +107,13 @@ test('should be patch on ~', async () => {
   bumper.loadPreset(path.join(__dirname, '../src/index.js'))
   const result = await bumper.bump()
 
-  expect(result).toStrictEqual({
-    level: 2,
-    reason: 'There are patches',
-    releaseType: 'patch',
-  })
+  expect(result).toStrictEqual(
+    expect.objectContaining({
+      level: 2,
+      reason: 'There are patches',
+      releaseType: 'patch',
+    }),
+  )
 
   await expect(
     streamToString(
@@ -129,11 +135,13 @@ test('should write multiple patches', async () => {
   bumper.loadPreset(path.join(__dirname, '../src/index.js'))
   const result = await bumper.bump()
 
-  expect(result).toStrictEqual({
-    level: 2,
-    reason: 'There are patches',
-    releaseType: 'patch',
-  })
+  expect(result).toStrictEqual(
+    expect.objectContaining({
+      level: 2,
+      reason: 'There are patches',
+      releaseType: 'patch',
+    }),
+  )
 
   await expect(
     streamToString(
@@ -155,11 +163,13 @@ test('should include message body', async () => {
   bumper.loadPreset(path.join(__dirname, '../src/index.js'))
   const result = await bumper.bump()
 
-  expect(result).toStrictEqual({
-    level: 2,
-    reason: 'There are patches',
-    releaseType: 'patch',
-  })
+  expect(result).toStrictEqual(
+    expect.objectContaining({
+      level: 2,
+      reason: 'There are patches',
+      releaseType: 'patch',
+    }),
+  )
 
   await expect(
     streamToString(
