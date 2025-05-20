@@ -37,18 +37,21 @@
     ]
   },
   "prettier": "@will-stone/prettier-config",
+  "overrides": {
+    "eslint": "$eslint"
+  },
   "devDependencies": {
-    "@vitest/eslint-plugin": "^1.1.43",
-    "@will-stone/eslint-config": "^16.0.1",
+    "@vitest/eslint-plugin": "^1.2.0",
+    "@will-stone/eslint-config": "^16.2.0",
     "@will-stone/prettier-config": "^11.0.1",
     "conventional-changelog": "^7.0.1",
     "conventional-changelog-core": "^9.0.0",
     "conventional-recommended-bump": "^11.1.0",
-    "eslint": "^9.25.1",
+    "eslint": "^9.27.0",
     "husky": "^9.1.7",
-    "lint-staged": "^15.5.1",
+    "lint-staged": "^16.0.0",
     "prettier": "^3.5.3",
-    "vitest": "^3.1.2"
+    "vitest": "^3.1.4"
   },
   "peerDependencies": {
     "@release-it/conventional-changelog": "^10.0.1",
@@ -64,8 +67,5 @@
     "onlyBuiltDependencies": [
       "esbuild"
     ]
-  },
-  "overrides": {
-    "eslint": "$eslint"
   }
 }
