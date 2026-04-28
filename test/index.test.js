@@ -1,11 +1,9 @@
-import path from 'node:path'
-
 import conventionalChangelog from 'conventional-changelog-core'
 import { Bumper } from 'conventional-recommended-bump'
+import path from 'node:path'
 import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 
 import preset from '../src/index.js'
-
 import { TestTools } from './utils.js'
 
 function streamToString(stream) {
