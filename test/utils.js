@@ -82,14 +82,14 @@ export class TestTools {
 
   gitInit() {
     this.mkdirSync('git-templates')
-    return this.exec(
-      'git init --template=./git-templates  --initial-branch=master',
-    )
+    return this.exec('git init --template=./git-templates  --initial-branch=master')
   }
 
   gitCommit(msg) {
     const args = formatMessageArgs(msg)
     args.push('--allow-empty', '--no-gpg-sign')
-    return this.exec(`git commit ${args.join(' ')}`)
+    return this.exec(
+      `git -c user.name='Joe Bloggs' -c user.email='joe@example.com' commit ${args.join(' ')}`,
+    )
   }
 }
