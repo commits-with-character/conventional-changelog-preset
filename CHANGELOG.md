@@ -1,5 +1,19 @@
 # Changelog
 
+## [6.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/5.1.1...6.0.0) (2026-05-02)
+
+### Major changes
+
+- Upgrade to @release-it/conventional-changelog v11 and release-it v20
+  ([905a5e3](https://github.com/commits-with-character/conventional-changelog-preset/commit/905a5e389a94043472b3b809337a5618710947b5))
+
+### Patches
+
+- Fix publishing (again)
+  ([cc1f273](https://github.com/commits-with-character/conventional-changelog-preset/commit/cc1f2733e4804b1fe9cb1ec7482ca3cb5eb252b5))
+- Use trusted publishing
+  ([67be131](https://github.com/commits-with-character/conventional-changelog-preset/commit/67be131c30c87df7d25558603a4ea0901b9d18e1))
+
 ## [5.1.1](https://github.com/commits-with-character/conventional-changelog-preset/compare/5.1.0...5.1.1) (2025-05-01)
 
 ### Patches
@@ -50,8 +64,7 @@
 
 ### Major changes
 
-- Set peerDep on release-it to v18, and @release-it/conventional-changelog to
-  v10
+- Set peerDep on release-it to v18, and @release-it/conventional-changelog to v10
   ([be5309a](https://github.com/commits-with-character/conventional-changelog-preset/commit/be5309ae28950a375c4763babdf3a0ee5c3c5ae9))
 
 ## [1.0.0](https://github.com/commits-with-character/conventional-changelog-preset/compare/0.2.2...1.0.0) (2024-10-15)
