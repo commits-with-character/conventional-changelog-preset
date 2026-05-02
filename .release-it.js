@@ -7,6 +7,9 @@ export default {
   hooks: {
     'before:init': ['pnpm lint', 'pnpm test'],
   },
+  npm: {
+    skipChecks: true,
+  },
   plugins: {
     '@release-it/conventional-changelog': {
       header: '# Changelog',
