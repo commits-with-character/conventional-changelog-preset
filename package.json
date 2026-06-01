@@ -61,16 +61,11 @@
     "@release-it/conventional-changelog": "^11.0.0",
     "release-it": "^20.0.1"
   },
-  "packageManager": "pnpm@10.33.2",
+  "packageManager": "pnpm@11.5.0",
   "engines": {
     "node": ">=18"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
   }
 }
