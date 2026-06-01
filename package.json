@@ -43,19 +43,19 @@
     "eslint": "$eslint"
   },
   "devDependencies": {
-    "@release-it/conventional-changelog": "^11.0.0",
-    "@vitest/eslint-plugin": "^1.6.16",
-    "@will-stone/eslint-config": "^26.2.0",
+    "@release-it/conventional-changelog": "^11.0.1",
+    "@vitest/eslint-plugin": "^1.6.18",
+    "@will-stone/eslint-config": "^27.0.2",
     "@will-stone/prettier-config": "^12.0.0",
     "conventional-changelog": "^7.2.0",
     "conventional-changelog-core": "^9.0.0",
     "conventional-recommended-bump": "^11.2.0",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
-    "lint-staged": "^16.4.0",
+    "lint-staged": "^17.0.7",
     "prettier": "^3.8.3",
-    "release-it": "^20.0.1",
-    "vitest": "^4.1.5"
+    "release-it": "^20.2.0",
+    "vitest": "^4.1.7"
   },
   "peerDependencies": {
     "@release-it/conventional-changelog": "^11.0.0",
