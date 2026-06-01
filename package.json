@@ -30,7 +30,7 @@
     "release": "release-it",
     "test": "vitest"
   },
-  "lint-staged": {
+  "nano-staged": {
     "*.{css,json,md,js,cjs,mjs}": [
       "prettier --write"
     ],
@@ -52,7 +52,7 @@
     "conventional-recommended-bump": "^11.2.0",
     "eslint": "^9.39.4",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.7",
+    "nano-staged": "^1.0.2",
     "prettier": "^3.8.3",
     "release-it": "^20.2.0",
     "vitest": "^4.1.7"
