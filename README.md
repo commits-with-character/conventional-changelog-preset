@@ -1,13 +1,12 @@
 # @commits-with-character/conventional-changelog-preset
 
-An adapter you can use with tools such as
-[release-it](https://github.com/release-it/release-it)'s
-[Conventional Changelog plugin](https://github.com/release-it/conventional-changelog)
-to provide the recommended bump, and update the changelog file.
+An adapter you can use with tools such as [release-it](https://github.com/release-it/release-it)'s
+[Conventional Changelog plugin](https://github.com/release-it/conventional-changelog) to provide the
+recommended bump, and update the changelog file.
 
-It will convert [Commits with Character](https://commits-with-character.org/)
-style commit messages to a changelog. The Commits With Character prefixes are
-parsed into the following changelog categories:
+It will convert [Commits with Character](https://commits-with-character.org/) style commit messages
+to a changelog. The Commits With Character prefixes are parsed into the following changelog
+categories:
 
 - `~` -> Patches.
 - `^` -> Minor changes.
