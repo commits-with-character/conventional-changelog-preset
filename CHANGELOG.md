@@ -1,5 +1,12 @@
 # Changelog
 
+## [6.0.2](https://github.com/commits-with-character/conventional-changelog-preset/compare/6.0.1...6.0.2) (2026-08-05)
+
+### Patches
+
+- Dummy release
+  ([5b39db5](https://github.com/commits-with-character/conventional-changelog-preset/commit/5b39db542d99fa8ae5bcfb3957f34c2c97af49fe))
+
 ## [6.0.1](https://github.com/commits-with-character/conventional-changelog-preset/compare/6.0.0...6.0.1) (2026-06-01)
 
 ### Patches
