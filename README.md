@@ -1,5 +1,10 @@
 # @commits-with-character/conventional-changelog-preset
 
+> [!IMPORTANT]  
+> This tool has been deprecated. Please see the
+> [Commits with Character](https://commits-with-character.org/) "Automation" instructions on how to
+> use the commit standard with [Semantic Release](https://semantic-release.org/) instead.
+
 An adapter you can use with tools such as [release-it](https://github.com/release-it/release-it)'s
 [Conventional Changelog plugin](https://github.com/release-it/conventional-changelog) to provide the
 recommended bump, and update the changelog file.
